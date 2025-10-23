@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Cari's Offshore Rig Services</title>
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --cari-red: #A63D3D;
+            --cari-dark: #1A1A1A;
+            --cari-light: #FAF8F5;
+        }
+        .bg-cari-red { background-color: var(--cari-red); }
+        .text-cari-red { color: var(--cari-red); }
+        .bg-cari-dark { background-color: var(--cari-dark); }
+        .text-cari-dark { color: var(--cari-dark); }
+        .bg-cari-light { background-color: var(--cari-light); }
+        body { font-family: 'Inter', sans-serif; background-color: var(--cari-light); color: var(--cari-dark); }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-cari-light min-h-screen">
+
+    <!-- Navigation Bar --><header class="sticky top-0 z-50 shadow-md bg-cari-light border-b border-gray-200">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html#home" class="flex items-center space-x-2 group">
+                <span class="text-xl font-extrabold text-cari-red tracking-wider group-hover:text-cari-dark transition-colors duration-300">CARI'S</span>
+                <span class="text-sm font-semibold text-cari-dark uppercase tracking-widest hidden sm:inline">Offshore Rig Services</span>
+            </a>
+            <div class="space-x-4">
+                <a href="index.html#home" class="text-cari-dark hover:text-cari-red transition duration-300 font-medium">Home</a>
+                <a href="about.html#about" class="text-cari-dark hover:text-cari-red transition duration-300 font-medium">About</a>
+                <a href="projects.html#projects" class="text-cari-dark hover:text-cari-red transition duration-300 font-medium">Projects</a>
+                <a href="about.html#contact" class="px-4 py-2 bg-cari-red text-white rounded-lg shadow-md hover:bg-cari-dark transition duration-300 text-sm font-semibold">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="bg-cari-dark text-white py-16 sm:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">About Cari's Offshore Rig Services</h1>
+            <p class="text-lg text-gray-300">
+                Bringing decades of offshore experience from the rig floor to executive leadership.
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section --><section id="about" class="py-16 sm:py-24 bg-cari-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-center mb-12 text-cari-dark border-b-2 border-cari-red pb-2 inline-block mx-auto">Who We Are</h2>
+
+            <div class="flex flex-col md:flex-row items-center gap-12">
+
+                <!-- Cari's Profile Card --><div class="md:w-1/3 bg-white p-6 rounded-xl shadow-xl border border-cari-red/30">
+                    <div class="flex flex-col items-center">
+                        <!-- Simplified representation of Cari (silhouette) --><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-20 h-20 text-cari-dark mb-4 fill-current">
+                            <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.7 304 0 383.7 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7c0-98.7-79.7-178.3-178.3-178.3h-.1z"/>
+                        </svg>
+                        <h3 class="text-2xl font-bold text-cari-red">Cari, Owner & Operator</h3>
+                        <p class="text-sm text-gray-600 mt-1">Lead Offshore Consultant</p>
+                        <p class="text-3xl font-extrabold mt-4 text-cari-dark">15+ <span class="text-lg font-semibold block text-gray-500">Years Experience</span></p>
+                    </div>
+                </div>
+
+                <!-- Company Description --><div class="md:w-2/3 text-lg space-y-4">
+                    <p class="font-semibold text-cari-dark">
+                        Cari's Offshore Rig Services is led by Cari, a force of nature whose 15+ years of experience spans the entire vertical spectrum of the offshore world.
+                    </p>
+                    <p class="text-gray-900">
+                        <br>She didn't start in a boardroom; she started at the core. Cari has held every major role on a rig—from the most dangerous, hands-on work in the cellar deck, managing casing and high-pressure equipment, all the way up to the most complex, high-stakes decisions from the driller's cabin and the offshore management office.
+                        <br>This unparalleled journey, from the bottom floor to the top of the tower, gives us an operational clarity and risk assessment capability no analyst can match. We don't just consult; we've lived the challenges. When the stakes are high, we deliver results because we know what happens at every single level of the operation.
+                    </p>
+                    <p class="text-gray-700">
+                        <br>We provide expert guidance in drilling operations, rig efficiency, deepwater project development, and safety compliance across international waters. Our mission is to optimize performance and reduce operational risk for the world's most complex offshore projects, from semi-submersibles to tension leg platforms.
+                    </p>
+                    <p class="text-gray-700">
+                        Our reputation is built on successful project delivery, technical expertise, and an unwavering commitment to safety and environmental stewardship. When the stakes are high, we deliver results.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section --><section id="contact" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-cari-dark border-b-2 border-cari-red pb-2 inline-block mx-auto mb-10">Get In Touch</h2>
+            <p class="text-xl text-gray-700 mb-8">
+                Ready to discuss your next critical offshore project? Reach out to Cari directly for a consultation.
+            </p>
+
+            <div class="bg-white p-8 rounded-xl shadow-2xl border border-cari-red/50">
+                <div class="space-y-4">
+                    <p class="text-lg font-semibold text-cari-dark">Email:</p>
+                    <a href="mailto:cari.services@example.com" class="text-xl text-cari-red hover:text-cari-dark transition duration-300 font-medium break-words">cari.services@example.com</a>
+                </div>
+                <div class="space-y-4 mt-8">
+                    <p class="text-lg font-semibold text-cari-dark">Phone (Consultations):</p>
+                    <a href="tel:+15551234567" class="text-xl text-cari-red hover:text-cari-dark transition duration-300 font-medium">+1 (555) 123-4567</a>
+                </div>
+                <div class="space-y-4 mt-8">
+                    <p class="text-lg font-semibold text-cari-dark">Headquarters:</p>
+                    <p class="text-lg text-gray-700">
+                        Houston, Texas (Global Operations Hub)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer --><footer class="bg-cari-dark text-white py-6 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2025 Cari's Offshore Rig Services. All rights reserved.</p>
+            <p class="mt-1 text-gray-400">Expertise on the water, integrity on the job.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
