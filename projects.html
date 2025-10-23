@@ -246,5 +246,33 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            const normalizedCurrentPath = currentPath === '' ? 'index.html' : currentPath;
+            const navLinks = document.querySelectorAll('nav a[href]');
+
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (!href) {
+                    return;
+                }
+
+                const [path, hash] = href.split('#');
+                let normalizedTargetPath = path || normalizedCurrentPath;
+
+                if (normalizedTargetPath === '' || normalizedTargetPath === '.') {
+                    normalizedTargetPath = normalizedCurrentPath;
+                }
+
+                if (
+                    normalizedTargetPath === normalizedCurrentPath &&
+                    (!hash || document.getElementById(hash))
+                ) {
+                    link.classList.add('hidden');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
