@@ -29,319 +29,62 @@
             50% { transform: scale(1.05); }
         }
         .icon-pulse { animation: pulse-icon 2s ease-in-out infinite; }
-        
-        /* Custom CSS for the Hover Effect */
-        .project-card {
-            /* Ensures the card is the reference point for the absolute image */
-            position: relative;
-            /* Hides overflow to prevent the initial image position from showing */
-            overflow: hidden; 
-            /* Ensures border-t-4 is visible and not covered by image initially */
-            padding: 1.5rem; /* Equivalent to p-6 */
-        }
-        .image-overlay {
-            /* Positioning: covers the entire card area */
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            /* Initial State: pushed down fully outside the visible area */
-            transform: translateY(100%);
-            /* Transition: defines the smooth slide-up animation */
-            transition: transform 0.5s ease-out;
-            /* Ensure it sits on top of the text content */
-            z-index: 20;
-            /* Optional: Add a subtle transition to the content underneath */
-        }
-        .project-card:hover .image-overlay {
-            /* Hover State: slides up to cover the card */
-            transform: translateY(0);
-        }
-        .project-content {
-            z-index: 10;
-            position: relative;
-            transition: opacity 0.3s ease;
-        }
-        .project-card:hover .project-content {
-             opacity: 0;
-        }
-
     </style>
 </head>
 <body class="bg-cari-light min-h-screen">
 
     <!-- Navigation Bar --><header class="sticky top-0 z-50 shadow-md bg-cari-light border-b border-gray-200">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
+            <a href="index.html#home" class="flex items-center space-x-2 group">
                 <!-- START: Updated Logo in Nav Bar (Smaller version for mobile/nav) -->
                 <!-- PATH UPDATED: uses relative path for publication -->
-                <!--<img src="images/logo.jpg" 
-                     alt="Cari's Offshore Rig Services Logo" 
+                <!--<img src="images/logo.jpg"
+                     alt="Cari's Offshore Rig Services Logo"
                      class="h-10 w-auto"
                 /> -->
-                <span class="text-xl font-extrabold text-cari-red tracking-wider">CARI'S</span>
+                <span class="text-xl font-extrabold text-cari-red tracking-wider group-hover:text-cari-dark transition-colors duration-300">CARI'S</span>
                 <span class="text-sm font-semibold text-cari-dark uppercase tracking-widest hidden sm:inline">Offshore Rig Services</span>
                 <!-- END: Updated Logo in Nav Bar -->
-            </div>
+            </a>
             <div class="space-x-4">
-                <a href="#about" class="text-cari-dark hover:text-cari-red transition duration-300 font-medium">About</a>
-                <a href="#projects" class="text-cari-dark hover:text-cari-red transition duration-300 font-medium">Projects</a>
-                <a href="#contact" class="px-4 py-2 bg-cari-red text-white rounded-lg shadow-md hover:bg-cari-dark transition duration-300 text-sm font-semibold">Contact</a>
+                <a href="index.html#home" class="text-cari-dark hover:text-cari-red transition duration-300 font-medium">Home</a>
+                <a href="projects.html#projects" class="text-cari-dark hover:text-cari-red transition duration-300 font-medium">Projects</a>
+                <a href="about.html#about" class="text-cari-dark hover:text-cari-red transition duration-300 font-medium">About</a>
+                <a href="about.html#contact" class="px-4 py-2 bg-cari-red text-white rounded-lg shadow-md hover:bg-cari-dark transition duration-300 text-sm font-semibold">Contact</a>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section --><section id="home" class="bg-cari-dark text-white py-20 sm:py-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            
+
             <!-- START: Updated Logo in Hero Section (Larger version) -->
             <!-- PATH UPDATED: uses relative path for publication -->
-            <img src="images/logo.jpg" 
-                 alt="Cari's Offshore Rig Services Logo" 
+            <img src="images/logo.jpg"
+                 alt="Cari's Offshore Rig Services Logo"
                  class="mx-auto w-52 sm:w-80 h-auto mb-6 bg-white p-4 rounded-xl icon-pulse"
                  style="background-color: var(--cari-light);"
             >
             <!-- END: Updated Logo in Hero Section -->
 
-            <!-- H1 Text has been updated to remove logo duplication -->
-            <!-- <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-4">
-                <span class="text-cari-red">Offshore Rig Services</span>
-            </h1> -->
             <p class="text-xl sm:text-2xl font-light max-w-3xl mx-auto mb-8 text-gray-300">
                 Strategic Consulting and Project Management for the World's Toughest Energy Challenges.
             </p>
-            <div class="inline-block px-6 py-3 bg-cari-red rounded-full shadow-lg font-bold text-lg">
-                15+ Years of Industry Expertise
+            <div class="inline-flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+                <span class="inline-block px-6 py-3 bg-cari-red rounded-full shadow-lg font-bold text-lg">15+ Years of Industry Expertise</span>
+                <a href="about.html#contact" class="inline-block px-6 py-3 border border-white/60 rounded-full font-semibold text-white hover:bg-white hover:text-cari-dark transition duration-300">Connect with Cari</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section --><section id="about" class="py-16 sm:py-24 bg-cari-light">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-extrabold text-center mb-12 text-cari-dark border-b-2 border-cari-red pb-2 inline-block mx-auto">Who We Are</h2>
-            
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                
-                <!-- Cari's Profile Card --><div class="md:w-1/3 bg-white p-6 rounded-xl shadow-xl border border-cari-red/30">
-                    <div class="flex flex-col items-center">
-                        <!-- Simplified representation of Cari (silhouette) --><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-20 h-20 text-cari-dark mb-4 fill-current">
-                            <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.7 304 0 383.7 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7c0-98.7-79.7-178.3-178.3-178.3h-.1z"/>
-                        </svg>
-                        <h3 class="text-2xl font-bold text-cari-red">Cari, Owner & Operator</h3>
-                        <p class="text-sm text-gray-600 mt-1">Lead Offshore Consultant</p>
-                        <p class="text-3xl font-extrabold mt-4 text-cari-dark">15+ <span class="text-lg font-semibold block text-gray-500">Years Experience</span></p>
-                    </div>
-                </div>
-
-                <!-- Company Description --><div class="md:w-2/3 text-lg space-y-4">
-                    <p class="font-semibold text-cari-dark">
-                        Cari's Offshore Rig Services is led by Cari, a force of nature whose 15+ years of experience spans the entire vertical spectrum of the offshore world.
-                    </p>
-                    <p class="text-gray-900">
-                        <br>She didn't start in a boardroom; she started at the core. Cari has held every major role on a rig—from the most dangerous, hands-on work in the cellar deck, managing casing and high-pressure equipment, all the way up to the most complex, high-stakes decisions from the driller's cabin and the offshore management office.
-                        <br>This unparalleled journey, from the bottom floor to the top of the tower, gives us an operational clarity and risk assessment capability no analyst can match. We don't just consult; we've lived the challenges. When the stakes are high, we deliver results because we know what happens at every single level of the operation.
-                    </p>
-                    <p class="text-gray-700">    
-                        <br>We provide expert guidance in drilling operations, rig efficiency, deepwater project development, and safety compliance across international waters. Our mission is to optimize performance and reduce operational risk for the world's most complex offshore projects, from semi-submersibles to tension leg platforms.
-                    </p>
-                    <p class="text-gray-700">
-                        Our reputation is built on successful project delivery, technical expertise, and an unwavering commitment to safety and environmental stewardship. When the stakes are high, we deliver results.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- --- --><!-- Projects Section --><section id="projects" class="py-16 sm:py-24 bg-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-extrabold text-center mb-12 text-cari-dark border-b-2 border-cari-red pb-2 inline-block mx-auto">Past Project Highlights</h2>
-            <p class="text-center text-lg text-gray-600 mb-10">
-                A selection of active, high-profile offshore installations where Cari has contributed critical expertise. 
+    <!-- Overview Section --><section class="py-16 sm:py-24 bg-cari-light">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+            <h2 class="text-3xl font-extrabold text-cari-dark border-b-2 border-cari-red inline-block pb-2">Strategic Partners for Offshore Success</h2>
+            <p class="text-lg text-gray-700">
+                Cari's Offshore Rig Services delivers hands-on consulting and operational leadership for deepwater projects across the globe.
+                Explore our <a href="projects.html" class="text-cari-red font-semibold hover:text-cari-dark transition duration-300">project portfolio</a>
+                and learn more <a href="about.html#about" class="text-cari-red font-semibold hover:text-cari-dark transition duration-300">about our experience</a> to see how we can support your next offshore initiative.
             </p>
-            <p class="text-center text-sm text-gray-400 mb-10">
-                Hover over or click a project card to see the rig image!
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Project Card 1: Perdido (Deepwater GOM) --><div class="project-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-cari-red">
-                    <!-- Project Content (Visible by default) --><div class="project-content space-y-2">
-                        <h3 class="text-xl font-bold mb-2 text-cari-dark">Perdido TLP</h3>
-                        <p class="text-sm text-gray-500 mb-4">Ultra-Deepwater, Gulf of Mexico, USA</p>
-                        <p class="text-gray-700">
-                            Provided engineering consulting for drilling optimization on the Perdido host facility, one of the world's deepest operating oil and gas projects. Focused on subsea tiebacks and riser management.
-                        </p>
-                    </div>
-                    
-                    <!-- Image Overlay (Hidden by default, slides up on hover) --><div class="image-overlay flex flex-col justify-center items-center bg-cari-dark/80">
-                        <!-- 1. Actual Image for Perdido TLP -->
-                        <!-- PATH UPDATED: uses relative path for publication -->
-                        <img src="images/PERDIDO TLP.jpeg" 
-                             alt="Perdido Tension Leg Platform" 
-                             class="w-full h-full object-cover absolute inset-0"
-                             onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
-                        >
-                        <!-- 2. Fallback Error Block - Hidden by default -->
-                        <div class="absolute inset-0 bg-cari-dark flex flex-col justify-center items-center hidden">
-                            <h4 class="text-2xl font-extrabold text-cari-red">IMAGE FAILED</h4>
-                            <p class="text-sm text-cari-light/80 mt-1">Source URL is broken.</p>
-                        </div>
-                        <!-- 3. Title overlay remains visible on top of image/error block -->
-                        <div class="relative z-30 text-center p-4">
-                            <h4 class="text-3xl font-extrabold text-white drop-shadow-lg">PERDIDO TLP</h4>
-                            <p class="text-md text-white mt-1">Deepwater Gulf of Mexico</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 2: Troll A (North Sea) --><div class="project-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-cari-red">
-                    <!-- Project Content (Visible by default) --><div class="project-content space-y-2">
-                        <h3 class="text-xl font-bold mb-2 text-cari-dark">Troll A Platform</h3>
-                        <p class="text-sm text-gray-500 mb-4">Gas Production, North Sea, Norway</p>
-                        <p class="text-gray-700">
-                            Managed quality control and compliance for structural integrity inspections on the iconic Troll A concrete gravity base structure (GBS) during a major maintenance shutdown.
-                        </p>
-                    </div>
-
-                    <!-- Image Overlay (Hidden by default, slides up on hover) --><div class="image-overlay flex flex-col justify-center items-center bg-cari-dark/80">
-                        <!-- 1. Actual Image for Troll A Platform -->
-                        <!-- PATH UPDATED: uses relative path for publication -->
-                        <img src="images/troll a platform.jpeg" 
-                             alt="Troll A Gravity Based Structure" 
-                             class="w-full h-full object-cover absolute inset-0"
-                             onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
-                        >
-                        <!-- 2. Fallback Error Block - Hidden by default -->
-                        <div class="absolute inset-0 bg-cari-dark flex flex-col justify-center items-center hidden">
-                            <h4 class="text-2xl font-extrabold text-cari-red">IMAGE FAILED</h4>
-                            <p class="text-sm text-cari-light/80 mt-1">Source URL is broken.</p>
-                        </div>
-                        <!-- 3. Title overlay remains visible on top of image/error block -->
-                        <div class="relative z-30 text-center p-4">
-                            <h4 class="text-3xl font-extrabold text-white drop-shadow-lg">TROLL A</h4>
-                            <p class="text-md text-white mt-1">North Sea Giant</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 3: Hibernia (Atlantic Canada) --><div class="project-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-cari-red">
-                    <!-- Project Content (Visible by default) --><div class="project-content space-y-2">
-                        <h3 class="text-xl font-bold mb-2 text-cari-dark">Hibernia GBS</h3>
-                        <p class="text-sm text-gray-500 mb-4">Harsh Environment, Atlantic Canada</p>
-                        <p class="text-gray-700">
-                            Served as the senior well-site supervisor, specializing in ice management protocols and drilling operations planning for the challenging, ice-prone region of the Jeanne d'Arc Basin.
-                        </p>
-                    </div>
-
-                    <!-- Image Overlay (Hidden by default, slides up on hover) --><div class="image-overlay flex flex-col justify-center items-center bg-cari-dark/80">
-                        <!-- 1. Actual Image for Hibernia GBS -->
-                        <!-- PATH UPDATED: uses relative path for publication -->
-                        <img src="images/HIBERNIA GBS.jpg" 
-                             alt="Hibernia Gravity Based Structure" 
-                             class="w-full h-full object-cover absolute inset-0"
-                             onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
-                        >
-                        <!-- 2. Fallback Error Block - Hidden by default -->
-                        <div class="absolute inset-0 bg-cari-dark flex flex-col justify-center items-center hidden">
-                            <h4 class="text-2xl font-extrabold text-cari-red">IMAGE FAILED</h4>
-                            <p class="text-sm text-cari-light/80 mt-1">Source URL is broken.</p>
-                        </div>
-                        <!-- 3. Title overlay remains visible on top of image/error block -->
-                        <div class="relative z-30 text-center p-4">
-                            <h4 class="text-3xl font-extrabold text-white drop-shadow-lg">HIBERNIA GBS</h4>
-                            <p class="text-md text-white mt-1">Harsh Environment Operations</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 4: Petrobras P-53 (Campos Basin) --><div class="project-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-cari-red">
-                    <!-- Project Content (Visible by default) --><div class="project-content space-y-2">
-                        <h3 class="text-xl font-bold mb-2 text-cari-dark">Petrobras P-53 FPSO</h3>
-                        <p class="text-sm text-gray-500 mb-4">Floating Production Storage and Offloading, Brazil</p>
-                        <p class="text-gray-700">
-                            Led efficiency audits and implementation of process improvements for the production and offloading systems on the P-53 Floating Production Storage and Offloading (FPSO) vessel.
-                        </p>
-                    </div>
-
-                    <!-- Image Overlay (Hidden by default, slides up on hover) --><div class="image-overlay flex flex-col justify-center items-center bg-cari-dark/80">
-                        <!-- 1. Actual Image for Petrobras P-53 FPSO -->
-                        <!-- PATH UPDATED: uses relative path for publication -->
-                        <img src="images/P-53 FPSO.jpg" 
-                             alt="Petrobras P-53 FPSO Vessel" 
-                             class="w-full h-full object-cover absolute inset-0"
-                             onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
-                        >
-                        <!-- 2. Fallback Error Block - Hidden by default -->
-                        <div class="absolute inset-0 bg-cari-dark flex flex-col justify-center items-center hidden">
-                            <h4 class="text-2xl font-extrabold text-cari-red">IMAGE FAILED</h4>
-                            <p class="text-sm text-cari-light/80 mt-1">Source URL is broken.</p>
-                        </div>
-                        <!-- 3. Title overlay remains visible on top of image/error block -->
-                        <div class="relative z-30 text-center p-4">
-                            <h4 class="text-3xl font-extrabold text-white drop-shadow-lg">P-53 FPSO</h4>
-                            <p class="text-md text-white mt-1">Floating Production Vessel, Brazil</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 5: Malikai (Malaysia) --><div class="project-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-cari-red">
-                    <!-- Project Content (Visible by default) --><div class="project-content space-y-2">
-                        <h3 class="text-xl font-bold mb-2 text-cari-dark">Malikai TLP</h3>
-                        <p class="text-sm text-gray-500 mb-4">Tension Leg Platform, Sabah, Malaysia</p>
-                        <p class="text-gray-700">
-                            Managed commissioning and startup procedures for the Malikai TLP, focusing on ensuring all subsea equipment and mooring systems met strict operational readiness standards.
-                        </p>
-                    </div>
-
-                    <!-- Image Overlay (Hidden by default, slides up on hover) --><div class="image-overlay flex flex-col justify-center items-center bg-cari-dark/80">
-                        <!-- 1. Actual Image for Malikai TLP -->
-                        <!-- PATH UPDATED: uses relative path for publication -->
-                        <img src="images/MALIKAI TLP.png" 
-                             alt="Malikai Tension Leg Platform" 
-                             class="w-full h-full object-cover absolute inset-0"
-                             onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
-                        >
-                        <!-- 2. Fallback Error Block - Hidden by default -->
-                        <div class="absolute inset-0 bg-cari-dark flex flex-col justify-center items-center hidden">
-                            <h4 class="text-2xl font-extrabold text-cari-red">IMAGE FAILED</h4>
-                            <p class="text-sm text-cari-light/80 mt-1">Source URL is broken.</p>
-                        </div>
-                        <!-- 3. Title overlay remains visible on top of image/error block -->
-                        <div class="relative z-30 text-center p-4">
-                            <h4 class="text-3xl font-extrabold text-white drop-shadow-lg">MALIKAI TLP</h4>
-                            <p class="text-md text-white mt-1">Tension Leg Platform, Malaysia</p>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-    
-    <!-- --- --><!-- Contact Section --><section id="contact" class="py-16 sm:py-24 bg-cari-light">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-extrabold text-cari-dark border-b-2 border-cari-red pb-2 inline-block mx-auto mb-10">Get In Touch</h2>
-            <p class="text-xl text-gray-700 mb-8">
-                Ready to discuss your next critical offshore project? Reach out to Cari directly for a consultation.
-            </p>
-
-            <div class="bg-white p-8 rounded-xl shadow-2xl border border-cari-red/50">
-                <div class="space-y-4">
-                    <p class="text-lg font-semibold text-cari-dark">Email:</p>
-                    <a href="mailto:cari.services@example.com" class="text-xl text-cari-red hover:text-cari-dark transition duration-300 font-medium break-words">cari.services@example.com</a>
-                </div>
-                <div class="space-y-4 mt-8">
-                    <p class="text-lg font-semibold text-cari-dark">Phone (Consultations):</p>
-                    <a href="tel:+15551234567" class="text-xl text-cari-red hover:text-cari-dark transition duration-300 font-medium">+1 (555) 123-4567</a>
-                </div>
-                <div class="space-y-4 mt-8">
-                    <p class="text-lg font-semibold text-cari-dark">Headquarters:</p>
-                    <p class="text-lg text-gray-700">
-                        Houston, Texas (Global Operations Hub)
-                    </p>
-                </div>
-            </div>
         </div>
     </section>
 
