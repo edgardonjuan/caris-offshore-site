@@ -24,7 +24,7 @@
 
     <!-- Navigation Bar --><header class="sticky top-0 z-50 shadow-md bg-cari-light border-b border-gray-200">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="index.html#home" class="flex items-center space-x-2 group">
+            <a href="index.html#home" class="flex items-center space-x-2 group" data-always-visible>
                 <span class="text-xl font-extrabold text-cari-red tracking-wider group-hover:text-cari-dark transition-colors duration-300">CARI'S</span>
                 <span class="text-sm font-semibold text-cari-dark uppercase tracking-widest hidden sm:inline">Offshore Rig Services</span>
             </a>
@@ -122,6 +122,10 @@
             const navLinks = document.querySelectorAll('nav a[href]');
 
             navLinks.forEach(link => {
+                if (link.hasAttribute('data-always-visible')) {
+                    return;
+                }
+
                 const href = link.getAttribute('href');
                 if (!href) {
                     return;
