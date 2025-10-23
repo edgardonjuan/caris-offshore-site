@@ -249,6 +249,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            const normalizedCurrentPath = currentPath === '' ? 'index.html' : currentPath;
             const navLinks = document.querySelectorAll('nav a[href]');
 
             navLinks.forEach(link => {
@@ -258,13 +259,15 @@
                 }
 
                 const [path, hash] = href.split('#');
-                const normalizedPath = path || 'index.html';
+                let normalizedTargetPath = path || normalizedCurrentPath;
+
+                if (normalizedTargetPath === '' || normalizedTargetPath === '.') {
+                    normalizedTargetPath = normalizedCurrentPath;
+                }
 
                 if (
-                    hash &&
-                    normalizedPath === currentPath &&
-                    document.getElementById(hash) &&
-                    link.classList.contains('bg-cari-red')
+                    normalizedTargetPath === normalizedCurrentPath &&
+                    (!hash || document.getElementById(hash))
                 ) {
                     link.classList.add('hidden');
                 }
