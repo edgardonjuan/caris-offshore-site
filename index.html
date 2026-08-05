@@ -3,129 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Offshore drilling consulting, project leadership, safety readiness, and rig efficiency support from Cari's Offshore Rig Services.">
     <title>Cari's Offshore Rig Services - Expert Energy Consulting</title>
-    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom Tailwind Configuration to match logo colors */
-        :root {
-            /* Updated to use the colors from the new logo: Deep Red and Black/Dark Gray */
-            --cari-red: #A63D3D; /* Retaining the original deep red for accents */
-            --cari-dark: #1A1A1A;
-            --cari-light: #FAF8F5; /* Light background color */
-        }
-        .bg-cari-red { background-color: var(--cari-red); }
-        .text-cari-red { color: var(--cari-red); }
-        .bg-cari-dark { background-color: var(--cari-dark); }
-        .text-cari-dark { color: var(--cari-dark); }
-        .bg-cari-light { background-color: var(--cari-light); }
-        body { font-family: 'Inter', sans-serif; background-color: var(--cari-light); color: var(--cari-dark); }
-
-        /* Smooth scroll for navigation */
-        html { scroll-behavior: smooth; }
-
-        /* Simple animation for the icon in the hero section */
-        @keyframes pulse-icon {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-        .icon-pulse { animation: pulse-icon 2s ease-in-out infinite; }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-cari-light min-h-screen">
-
-    <!-- Navigation Bar --><header class="sticky top-0 z-50 shadow-md bg-cari-light border-b border-gray-200">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="index.html#home" class="flex items-center space-x-2 group" data-always-visible>
-                <!-- START: Updated Logo in Nav Bar (Smaller version for mobile/nav) -->
-                <!-- PATH UPDATED: uses relative path for publication -->
-                <!--<img src="images/logo.jpg"
-                     alt="Cari's Offshore Rig Services Logo"
-                     class="h-10 w-auto"
-                /> -->
-                <span class="text-xl font-extrabold text-cari-red tracking-wider group-hover:text-cari-dark transition-colors duration-300">CARI'S</span>
-                <span class="text-sm font-semibold text-cari-dark uppercase tracking-widest hidden sm:inline">Offshore Rig Services</span>
-                <!-- END: Updated Logo in Nav Bar -->
+    <header class="site-header sticky top-0 z-50 shadow-sm border-b border-black/10">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center gap-6">
+            <a href="index.html#home" class="flex items-center gap-3 group" data-always-visible aria-label="Cari's Offshore Rig Services home">
+                <span class="brand-mark font-black">C</span>
+                <span>
+                    <span class="block text-xl font-extrabold text-cari-red tracking-wider group-hover:text-cari-dark transition-colors duration-300">CARI'S</span>
+                    <span class="block text-xs font-semibold text-cari-dark uppercase tracking-widest hidden sm:block">Offshore Rig Services</span>
+                </span>
             </a>
-            <div class="space-x-4">
-                <a href="index.html#home" class="text-cari-dark hover:text-cari-red transition duration-300 font-medium">Home</a>
-                <a href="projects.html#projects" class="text-cari-dark hover:text-cari-red transition duration-300 font-medium">Projects</a>
-                <a href="about.html#about" class="text-cari-dark hover:text-cari-red transition duration-300 font-medium">About</a>
-                <a href="about.html#contact" class="px-4 py-2 bg-cari-red text-white rounded-lg shadow-md hover:bg-cari-dark transition duration-300 text-sm font-semibold">Contact</a>
+            <div class="flex items-center gap-3 sm:gap-5 text-sm sm:text-base">
+                <a href="index.html#home" class="text-cari-dark hover:text-cari-red transition duration-300 font-semibold">Home</a>
+                <a href="projects.html#projects" class="text-cari-dark hover:text-cari-red transition duration-300 font-semibold">Projects</a>
+                <a href="about.html#about" class="text-cari-dark hover:text-cari-red transition duration-300 font-semibold">About</a>
+                <a href="about.html#contact" class="px-4 py-2 cta-primary text-white rounded-full shadow-md transition duration-300 font-bold">Contact</a>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section --><section id="home" class="bg-cari-dark text-white py-20 sm:py-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-
-            <!-- START: Updated Logo in Hero Section (Larger version) -->
-            <!-- PATH UPDATED: uses relative path for publication -->
-            <img src="images/logo.jpg"
-                 alt="Cari's Offshore Rig Services Logo"
-                 class="mx-auto w-52 sm:w-80 h-auto mb-6 bg-white p-4 rounded-xl icon-pulse"
-                 style="background-color: var(--cari-light);"
-            >
-            <!-- END: Updated Logo in Hero Section -->
-
-            <p class="text-xl sm:text-2xl font-light max-w-3xl mx-auto mb-8 text-gray-300">
-                Strategic Consulting and Project Management for the World's Toughest Energy Challenges.
-            </p>
-            <div class="inline-flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
-                <span class="inline-block px-6 py-3 bg-cari-red rounded-full shadow-lg font-bold text-lg">15+ Years of Industry Expertise</span>
-                <a href="about.html#contact" class="inline-block px-6 py-3 border border-white/60 rounded-full font-semibold text-white hover:bg-white hover:text-cari-dark transition duration-300">Connect with Cari</a>
+    <main>
+        <section id="home" class="hero-gradient ocean-grid text-white py-20 sm:py-28 lg:py-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[1.05fr_.95fr] gap-12 items-center">
+                <div class="space-y-8">
+                    <p class="section-eyebrow">Deepwater consulting • Rig operations • Safety leadership</p>
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-tight">
+                        Practical offshore leadership for high-stakes energy work.
+                    </h1>
+                    <p class="text-xl text-gray-200 max-w-2xl leading-relaxed">
+                        Cari's Offshore Rig Services helps operators plan safer campaigns, improve rig performance, and make critical offshore decisions with field-tested confidence.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="about.html#contact" class="px-7 py-4 cta-primary text-white rounded-full shadow-xl font-bold text-center transition">Schedule a consultation</a>
+                        <a href="projects.html#projects" class="px-7 py-4 border border-white/50 rounded-full font-bold text-white hover:bg-white hover:text-cari-dark transition text-center">View project work</a>
+                    </div>
+                </div>
+                <div class="glass-panel rounded-[2rem] p-6 sm:p-8">
+                    <img src="images/logo.jpg" alt="Cari's Offshore Rig Services Logo" class="w-full max-w-sm mx-auto rounded-2xl bg-cari-light p-4 shadow-2xl">
+                    <div class="grid grid-cols-3 gap-3 mt-6 text-center">
+                        <div class="rounded-2xl bg-white/10 p-4"><span class="block text-3xl font-black">15+</span><span class="text-xs uppercase tracking-wider text-gray-300">Years</span></div>
+                        <div class="rounded-2xl bg-white/10 p-4"><span class="block text-3xl font-black">5</span><span class="text-xs uppercase tracking-wider text-gray-300">Regions</span></div>
+                        <div class="rounded-2xl bg-white/10 p-4"><span class="block text-3xl font-black">24/7</span><span class="text-xs uppercase tracking-wider text-gray-300">Readiness</span></div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Overview Section --><section class="py-16 sm:py-24 bg-cari-light">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-            <h2 class="text-3xl font-extrabold text-cari-dark border-b-2 border-cari-red inline-block pb-2">Strategic Partners for Offshore Success</h2>
-            <p class="text-lg text-gray-700">
-                Cari's Offshore Rig Services delivers hands-on consulting and operational leadership for deepwater projects across the globe.
-                Explore our <a href="projects.html" class="text-cari-red font-semibold hover:text-cari-dark transition duration-300">project portfolio</a>
-                and learn more <a href="about.html#about" class="text-cari-red font-semibold hover:text-cari-dark transition duration-300">about our experience</a> to see how we can support your next offshore initiative.
-            </p>
-        </div>
-    </section>
+        <section class="py-16 sm:py-24 bg-cari-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mb-12">
+                    <p class="section-eyebrow">How we make offshore work better</p>
+                    <h2 class="text-3xl sm:text-5xl font-black text-cari-dark mt-3">Sharper plans, safer execution, cleaner handoffs.</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <article class="card-lift bg-white rounded-3xl p-8 border border-black/10">
+                        <h3 class="text-xl font-black text-cari-dark mb-3">Operational Readiness</h3>
+                        <p class="text-gray-700 leading-relaxed">Pre-spud reviews, crew alignment, equipment readiness checks, and risk registers built for the realities of the rig floor.</p>
+                    </article>
+                    <article class="card-lift bg-white rounded-3xl p-8 border border-black/10">
+                        <h3 class="text-xl font-black text-cari-dark mb-3">Performance Improvement</h3>
+                        <p class="text-gray-700 leading-relaxed">Rig efficiency audits, non-productive-time reduction, and practical workflows that help teams move from lessons learned to measurable gains.</p>
+                    </article>
+                    <article class="card-lift bg-white rounded-3xl p-8 border border-black/10">
+                        <h3 class="text-xl font-black text-cari-dark mb-3">Project Leadership</h3>
+                        <p class="text-gray-700 leading-relaxed">Hands-on support for deepwater campaigns, commissioning windows, shutdown planning, compliance, and contractor coordination.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-    <!-- Footer --><footer class="bg-cari-dark text-white py-6 mt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
-            <p>&copy; 2025 Cari's Offshore Rig Services. All rights reserved.</p>
-            <p class="mt-1 text-gray-400">Expertise on the water, integrity on the job.</p>
+        <section class="py-16 bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+                <p class="section-eyebrow">Strategic partners for offshore success</p>
+                <h2 class="text-3xl sm:text-4xl font-black text-cari-dark">Bring field-proven clarity to your next offshore initiative.</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">Explore our project portfolio and learn how Cari's experience from the cellar deck to offshore management can strengthen your plan before the next critical decision point.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="projects.html" class="px-6 py-3 cta-primary text-white rounded-full font-bold shadow-lg">Explore projects</a>
+                    <a href="about.html#about" class="px-6 py-3 border border-cari-red text-cari-red rounded-full font-bold hover:bg-cari-red hover:text-white transition">Meet Cari</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-cari-dark text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between gap-3 text-sm text-center sm:text-left">
+            <p>&copy; 2026 Cari's Offshore Rig Services. All rights reserved.</p>
+            <p class="text-gray-400">Expertise on the water, integrity on the job.</p>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-            const normalizedCurrentPath = currentPath === '' ? 'index.html' : currentPath;
-            const navLinks = document.querySelectorAll('nav a[href]');
-
-            navLinks.forEach(link => {
-                if (link.hasAttribute('data-always-visible')) {
-                    return;
-                }
-
-                const href = link.getAttribute('href');
-                if (!href) {
-                    return;
-                }
-
-                const [path, hash] = href.split('#');
-                let normalizedTargetPath = path || normalizedCurrentPath;
-
-                if (normalizedTargetPath === '' || normalizedTargetPath === '.') {
-                    normalizedTargetPath = normalizedCurrentPath;
-                }
-
-                if (
-                    normalizedTargetPath === normalizedCurrentPath &&
-                    (!hash || document.getElementById(hash))
-                ) {
-                    link.classList.add('hidden');
-                }
-            });
-        });
-    </script>
 </body>
 </html>

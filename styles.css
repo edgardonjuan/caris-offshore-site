@@ -1,0 +1,65 @@
+:root {
+    --cari-red: #A63D3D;
+    --cari-red-dark: #7f2d2d;
+    --cari-dark: #141414;
+    --cari-charcoal: #242424;
+    --cari-light: #FAF8F5;
+    --cari-sand: #efe7dc;
+}
+
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--cari-light);
+    color: var(--cari-dark);
+}
+.bg-cari-red { background-color: var(--cari-red); }
+.text-cari-red { color: var(--cari-red); }
+.bg-cari-dark { background-color: var(--cari-dark); }
+.text-cari-dark { color: var(--cari-dark); }
+.bg-cari-light { background-color: var(--cari-light); }
+.border-cari-red { border-color: var(--cari-red); }
+
+.site-header {
+    backdrop-filter: blur(18px);
+    background: rgba(250, 248, 245, 0.92);
+}
+.brand-mark {
+    display: inline-grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 999px;
+    color: white;
+    background: linear-gradient(135deg, var(--cari-red), var(--cari-red-dark));
+    box-shadow: 0 12px 30px rgba(166, 61, 61, 0.25);
+}
+.hero-gradient {
+    background:
+        radial-gradient(circle at 18% 20%, rgba(166, 61, 61, 0.38), transparent 30%),
+        linear-gradient(135deg, #111 0%, #202020 54%, #3f2020 100%);
+}
+.ocean-grid {
+    background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 42px 42px;
+}
+.glass-panel {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+}
+.card-lift { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.card-lift:hover { transform: translateY(-6px); box-shadow: 0 24px 60px rgba(20,20,20,.14); border-color: rgba(166,61,61,.55); }
+.section-eyebrow {
+    color: var(--cari-red);
+    font-weight: 800;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    font-size: .78rem;
+}
+.cta-primary { background: linear-gradient(135deg, var(--cari-red), var(--cari-red-dark)); }
+.cta-primary:hover { filter: brightness(.95); }
+.project-card { position: relative; overflow: hidden; min-height: 22rem; }
+.project-card img { transition: transform .45s ease; }
+.project-card:hover img { transform: scale(1.06); }
+.project-scrim { background: linear-gradient(180deg, transparent 15%, rgba(0,0,0,.88) 100%); }
